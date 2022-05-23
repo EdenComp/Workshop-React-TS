@@ -1,12 +1,10 @@
-> If you see this section, you've just created a repository using [PoC Innovation's Open-Source project template](https://github.com/PoCInnovation/open-source-project-template). Check the [getting started guide](./.github/getting-started.md).
+# Workshop React TS
 
-# [PROJECT'S NAME]
-
-[Project's description]
+This project is the React App used for the new React Typescript Workshop from PoC-Innovation!
 
 ## How does it work?
 
-[Explain how this project is working]
+This project aims to learn how to create a front-end with React using Typescript.
 
 ## Getting Started
 
@@ -22,21 +20,11 @@
 
 [Explain how to use this project]
 
-## Get involved
-
-You're invited to join this project ! Check out the [contributing guide](./CONTRIBUTING.md).
-
-If you're interested in how the project is organized at a higher level, please contact the current project manager.
-
 ## Our PoC team :heart:
 
 Developers
-| [<img src="https://github.com/MrZalTy.png?size=85" width=85><br><sub>[Developer's name]</sub>](https://github.com/MrZalTy) | [<img src="https://github.com/MrZalTy.png?size=85" width=85><br><sub>[Developer's name]</sub>](https://github.com/MrZalTy) | [<img src="https://github.com/MrZalTy.png?size=85" width=85><br><sub>[Developer's name]</sub>](https://github.com/MrZalTy)
+| [<img src="https://github.com/Samoten777.png?size=85" width=85><br><sub>Laure GAGNER</sub>](https://github.com/Samoten777) | [<img src="https://github.com/EdenComp.png?size=85" width=85><br><sub>Florian LAUCH</sub>](https://github.com/EdenComp) | [<img src="https://github.com/nicolasheude.png?size=85" width=85><br><sub>Nicolas HEUDE</sub>](https://github.com/nicolasheude)
 | :---: | :---: | :---: |
-
-Manager
-| [<img src="https://github.com/adrienfort.png?size=85" width=85><br><sub>[Manager's name]</sub>](https://github.com/adrienfort)
-| :---: |
 
 <h2 align=center>
 Organization
