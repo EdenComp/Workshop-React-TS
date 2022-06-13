@@ -1,7 +1,5 @@
-import Dashboard from "views/Dashboard";
+import Dashboard from 'views/Dashboard';
 
-export default function App() : JSX.Element {
-  return (
-    <Dashboard/>
-  );
+export default function App(): JSX.Element {
+	return <Dashboard />;
 }
