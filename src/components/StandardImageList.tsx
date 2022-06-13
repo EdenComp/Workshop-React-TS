@@ -1,8 +1,9 @@
 import React from 'react';
+
 import ImageList from '@mui/material/ImageList';
 import ImageListItem from '@mui/material/ImageListItem';
 
-export default function StandardImageList() {
+export default function StandardImageList(): JSX.Element {
 	return (
 		<ImageList sx={{ width: 500, height: 450, marginLeft: '40%' }} cols={3} rowHeight={164}>
 			{itemData.map((item) => (
