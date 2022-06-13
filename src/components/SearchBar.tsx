@@ -1,9 +1,9 @@
 import SearchIcon from '@mui/icons-material/Search';
 import {Box, TextField} from '@mui/material';
 
-import * as React from 'react';
+import React from 'react';
 
-export default function SearchBar () : JSX.Element
+export default function SearchBar(): JSX.Element
 {
     const [search, setSearch] = React.useState('');
 

@@ -1,5 +1,5 @@
 // from left to right : logo insta, Instagram, search bar, menu déroulant avec profil
-import * as React from 'react';
+import React from 'react';
 
 import { AppBar, Box, IconButton, Menu, MenuItem, Toolbar, Tooltip, Typography } from '@mui/material';
 
@@ -7,7 +7,7 @@ import MonochromePhotosIcon from '@mui/icons-material/MonochromePhotos';
 
 import AccountCircle from '@mui/icons-material/AccountCircle';
 
-import SearchBar from './SearchBar';
+import SearchBar from 'components/SearchBar';
 
 const userMenu = ['Edit profile', 'Logout'];
 
@@ -77,4 +77,3 @@ const TopBar = (): JSX.Element => {
 }
 
 export default TopBar;
-
