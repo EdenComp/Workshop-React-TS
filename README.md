@@ -1,35 +1,68 @@
-# Workshop React TS
+# Workshop 1 - Kanban App in React
 
-This project is the React App used for the new React Typescript Workshop from PoC-Innovation!
+The goal of this workshop is to create a [Kanban-like](https://www.digite.com/kanban/what-is-kanban/) application using the React library in Typescript
+<br/><br/>
+## Step 0: Initialization
 
-## How does it work?
+All the installation steps required to do the exercises are detailed in the [SETUP.md](./SETUP.md)
+<br/><br/>
+## Step 1: Create your first component
 
-This project aims to learn how to create a front-end with React using Typescript.
+`Components` are the core of React. They represent a single element in a web page, like a `text` box, a `button`, a `div` etc. All combined together, they create a fully working web page. These components are re-usable, they prevent you from code duplication.
 
-## Getting Started
+You will learn how to [create components](https://www.w3schools.com/react/react_components.asp) right now in the first step!
 
-### Installation
+> In this workshop, we recommend you to use `Functional Components`, instead of `Javascript classes`. [Here](https://djoech.medium.com/functional-vs-class-components-in-react-231e3fbd7108) is a little explanation of the differences.
 
-[Explain how to install all of the project's dependencies]
+In `src/App.ts`, create a component that will display the application title, which is just a string.
+In Typescript, we must specify the type of the return value of the function: for all TSX React components, you can use `React.Element`.
 
-### Quickstart
+```tsx
+function Title(): React.Element {
+    return (...)
+}
+```
 
-[Explain how to run this project]
+Then, in your `app function`, you should have:
 
-### Usage
+```tsx
+function App(): React.Element {
+  return (
+    ...
+      <Title />
+    ...
+  );
+}
+```
+<br/><br/>
+## Step 2: Show content with Components from Material UI
 
-[Explain how to use this project]
+Now that you know how to create a component in React, let's get into Material UI.
+Material UI is a library of pre-built components that you can use in your React app.
+Discover [here](https://dev.to/amberjones/5-delightful-things-about-material-ui-5402) the advantages of using a components library such as Material UI.
 
-## Our PoC team :heart:
+The goal of this task is to create the `Task` component: this component will represent a task with all its information, including:
+- A title
+- A description
+- A due time
 
-Developers
-| [<img src="https://github.com/Samoten777.png?size=85" width=85><br><sub>Laure GAGNER</sub>](https://github.com/Samoten777) | [<img src="https://github.com/EdenComp.png?size=85" width=85><br><sub>Florian LAUCH</sub>](https://github.com/EdenComp) | [<img src="https://github.com/nicolasheude.png?size=85" width=85><br><sub>Nicolas HEUDE</sub>](https://github.com/nicolasheude)
-| :---: | :---: | :---: |
+To do so, you must use the [Material UI Components](https://mui.com/components/), such as [Box](https://mui.com/material-ui/react-box/) or [Typography](https://mui.com/material-ui/react-typography/).
 
+:bulb: We let you figure out which components you may use from the link below!
+
+> From now, we recommend you to create a `Components` folder in your `src` folder, and to create one file per component and naming it with the name of your component. For instance, the `Task` component should be located in `src/Components/App.tsx`.
+
+:bulb: Don't forget to [export](https://medium.com/swlh/javascript-import-export-basics-ed7d94caf4c0) your functions to reuse them in your `src/App.tsx`!
+
+
+## Authors
+
+| [<img src="https://github.com/RezaRahemtola.png?size=85" width=85><br><sub>Reza Rahemtola</sub>](https://github.com/RezaRahemtola) | [<img src="https://github.com/EdenComp.png?size=85" width=85><br><sub>Florian Lauch</sub>](https://github.com/EdenComp) | [<img src="https://github.com/Samoten777.png?size=85" width=85><br><sub>Laure Gagner</sub>](https://github.com/Samoten777) | [<img src="https://github.com/nicolasheude.png?size=85" width=85><br><sub>Nicolas Heude</sub>](https://github.com/nicolasheude) 
+| :---: | :---: | :---: | :---: |
 <h2 align=center>
 Organization
 </h2>
-
+<br/>
 <p align='center'>
     <a href="https://www.linkedin.com/company/pocinnovation/mycompany/">
         <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white">
@@ -50,6 +83,4 @@ Organization
     </a>
 </p>
 
-> :rocket: Don't hesitate to follow us on our different networks, and put a star 🌟 on `PoC's` repositories
-
-> Made with :heart: by PoC
+> :rocket: Don't hesitate to follow us on our different networks, and put a star 🌟 on `PoC's` repositories.
