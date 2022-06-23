@@ -15,9 +15,10 @@ export default function AddButton({ tasks, setTasks }: AddButtonProps): JSX.Elem
 			color="primary"
 			aria-label="Add a task"
 			component="span"
+			style={{ position: 'absolute', right: '10px', bottom: '10px' }}
 			onClick={() => addTask('Task 42', 'Ma description', tasks, setTasks)}
 		>
-			<AddCircleIcon />
+			<AddCircleIcon fontSize="large" />
 		</IconButton>
 	);
 }
