@@ -15,10 +15,10 @@ You will learn how to [create components](https://www.w3schools.com/react/react_
 > In this workshop, we recommend you to use `Functional Components`, instead of `Javascript classes`. [Here](https://djoech.medium.com/functional-vs-class-components-in-react-231e3fbd7108) is a little explanation of the differences.
 
 In `src/App.ts`, create a component that will display the application title, which is just a string.
-In Typescript, we must specify the type of the return value of the function: for all TSX React components, you can use `React.Element`.
+In Typescript, we must specify the type of the return value of the function: for all TSX React components, you can use `JSX.Element`.
 
 ```tsx
-function Title(): React.Element {
+function Title(): JSX.Element {
     return (...)
 }
 ```
@@ -26,7 +26,7 @@ function Title(): React.Element {
 Then, in your `app function`, you should have:
 
 ```tsx
-function App(): React.Element {
+function App(): JSX.Element {
   return (
     ...
       <Title />
