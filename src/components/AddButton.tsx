@@ -6,7 +6,7 @@ import { addTask } from 'utils/addTask';
 
 type AddButtonProps = {
 	tasks: TaskType[];
-	setTasks: React.Dispatch<React.SetStateAction<TaskType[]>>;
+	setTasks: (tasks: TaskType[]) => void;
 };
 
 export default function AddButton({ tasks, setTasks }: AddButtonProps): JSX.Element {
