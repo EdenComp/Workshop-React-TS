@@ -10,17 +10,15 @@ type TaskCardProps = {
 
 export default function TaskCard({ title, description }: TaskCardProps): JSX.Element {
 	return (
-		<>
-			<Card sx={{ maxWidth: 400 }}>
-				<CardContent>
-					<Typography variant="h5" component="div">
-						{title}
-					</Typography>
-					<Typography sx={{ mb: 1.5 }} color="text.secondary">
-						{description}
-					</Typography>
-				</CardContent>
-			</Card>
-		</>
+		<Card sx={{ maxWidth: 400 }}>
+			<CardContent>
+				<Typography variant="h5" component="div">
+					{title}
+				</Typography>
+				<Typography sx={{ mb: 1.5 }} color="text.secondary">
+					{description}
+				</Typography>
+			</CardContent>
+		</Card>
 	);
 }
