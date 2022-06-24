@@ -1,20 +1,18 @@
-import { useContext } from 'react';
 import IconButton from '@mui/material/IconButton';
 import AddCircleIcon from '@mui/icons-material/AddCircle';
 
-import { TaskContext } from 'context';
-import { addTask } from 'utils/addTask';
+type AddButtonProps = {
+	setOpen: (open: boolean) => void;
+};
 
-export default function AddButton(): JSX.Element {
-	const { tasks, setTasks } = useContext(TaskContext);
-
+export default function AddButton({ setOpen }: AddButtonProps): JSX.Element {
 	return (
 		<IconButton
 			color="primary"
 			aria-label="Add a task"
 			component="span"
 			style={{ position: 'absolute', right: '10px', bottom: '10px' }}
-			onClick={() => addTask('Task 42', 'Ma description', tasks, setTasks)}
+			onClick={() => setOpen(true)}
 		>
 			<AddCircleIcon fontSize="large" />
 		</IconButton>

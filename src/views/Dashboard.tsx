@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import AddButton from 'components/AddButton';
+import AddModal from 'components/AddModal';
 import TaskGrid from 'components/Tasks/TaskGrid';
 
 import { TaskType } from 'types/types';
@@ -13,7 +13,7 @@ export default function Dashboard(): JSX.Element {
 		<>
 			<TaskContext.Provider value={{ tasks, setTasks }}>
 				<TaskGrid />
-				<AddButton />
+				<AddModal />
 			</TaskContext.Provider>
 		</>
 	);
