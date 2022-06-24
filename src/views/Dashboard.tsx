@@ -3,6 +3,7 @@ import AddButton from 'components/AddButton';
 import TaskGrid from 'components/Tasks/TaskGrid';
 
 import { TaskType } from 'types/types';
+import { TaskContext } from 'context';
 import db from 'db/example.json';
 
 export default function Dashboard(): JSX.Element {
@@ -10,8 +11,10 @@ export default function Dashboard(): JSX.Element {
 
 	return (
 		<>
-			<TaskGrid tasks={tasks} />
-			<AddButton tasks={tasks} setTasks={setTasks} />
+			<TaskContext.Provider value={{ tasks, setTasks }}>
+				<TaskGrid />
+				<AddButton />
+			</TaskContext.Provider>
 		</>
 	);
 }

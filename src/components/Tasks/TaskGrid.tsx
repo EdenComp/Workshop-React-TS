@@ -1,13 +1,12 @@
+import { useContext } from 'react';
 import Grid from '@mui/material/Grid';
 
 import TaskCard from 'components/Tasks/TaskCard';
-import { TaskType } from 'types/types';
+import { TaskContext } from 'context';
 
-type TaskGridProps = {
-	tasks: TaskType[];
-};
+export default function TaskGrid(): JSX.Element {
+	const { tasks } = useContext(TaskContext);
 
-export default function TaskGrid({ tasks }: TaskGridProps): JSX.Element {
 	return (
 		<Grid container rowSpacing={1} columnSpacing={{ xs: 1 }}>
 			{tasks.map((task) => (
