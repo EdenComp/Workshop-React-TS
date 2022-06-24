@@ -10,11 +10,9 @@ export default function Dashboard(): JSX.Element {
 	const [tasks, setTasks] = useState<TaskType[]>(db.tasks);
 
 	return (
-		<>
-			<TaskContext.Provider value={{ tasks, setTasks }}>
-				<TaskGrid />
-				<AddModal />
-			</TaskContext.Provider>
-		</>
+		<TaskContext.Provider value={{ tasks, setTasks }}>
+			<TaskGrid />
+			<AddModal />
+		</TaskContext.Provider>
 	);
 }
