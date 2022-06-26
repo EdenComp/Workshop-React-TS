@@ -15,10 +15,10 @@ You will learn how to [create components](https://www.w3schools.com/react/react_
 > In this workshop, we recommend you to use `Functional Components`, instead of `Javascript classes`. [Here](https://djoech.medium.com/functional-vs-class-components-in-react-231e3fbd7108) is a little explanation of the differences.
 
 In `src/App.ts`, create a component that will display the application title, which is just a string.
-In Typescript, we must specify the type of the return value of the function: for all TSX React components, you can use `JSX.Element`.
+In Typescript, we must specify the type of the return value of the function: for all TSX React components, you can use `React.Element`.
 
 ```tsx
-function Title(): JSX.Element {
+function Title(): React.Element {
     return (...)
 }
 ```
@@ -26,7 +26,7 @@ function Title(): JSX.Element {
 Then, in your `app function`, you should have:
 
 ```tsx
-function App(): JSX.Element {
+function App(): React.Element {
   return (
     ...
       <Title />
@@ -53,8 +53,64 @@ To do so, you must use the [Material UI Components](https://mui.com/components/)
 > From now, we recommend you to create a `Components` folder in your `src` folder, and to create one file per component and naming it with the name of your component. For instance, the `Task` component should be located in `src/Components/App.tsx`.
 
 :bulb: Don't forget to [export](https://medium.com/swlh/javascript-import-export-basics-ed7d94caf4c0) your functions to reuse them in your `src/App.tsx`!
+<br/><br/>
+## Step 3: Show all the tasks from a list with props
 
+At this moment, you know how to create a single component and how to add it to your application. But what if you need to show a list of components that you cannot determine in advance? For example a list of tasks :thinking:
 
+To do so, you can create a `List` component that will show all the tasks iteratively. 
+
+> You can create a [Typescript type](https://www.typescriptlang.org/docs/handbook/basic-types.html) representing the tasks and their information, and a array to store them.
+
+You can then use [React Props](https://reactjs.org/docs/components-and-props.html) to pass variables from your main components to your children components, and iterate your `Tasks array` with the Javascript [map](https://reactjs.org/docs/lists-and-keys.html) function.
+
+:bulb: When you create a component through an iteration, don't forget to pass a unique `key` in component props!
+<br/><br/>
+## Step 4: Create interactive components using useState
+
+From now, you are able to create static components that doesn't interact with the user.
+We will now create dynamic components to allow the user to create a new task to the list, using [React hooks](https://reactjs.org/docs/hooks-intro.html).
+
+To create a task, we need to create forms where the user can enter a title and a description, and a button to validate. Let's create them with [Material UI](https://mui.com/components/)!
+
+Let's then use the [useState](https://www.freecodecamp.org/news/introduction-to-react-hooks/) hook to handle user input and button clicks!
+
+:bulb: Mix the usage of `useState` with `props`!
+
+> We recommend you to create a small '+' button in one of the corner of your app that will open a small window containing the title and description forms as well as the button to add the task.
+
+:bulb: You can customize your hooks to avoid unwanted cases, such as an empty title or description.
+<br/><br/>
+## Step 5: Discover another hook: React contexts
+
+In the previous step, we told you that you could pass your `useState` hooks into your components `props`. This way to do can be a bit annoying as you have to pass the variable into props from all the children from the component you created it.
+
+To solve this problem, we can use `contexts`. [React contexts](https://reactjs.org/docs/context.html) are another type of React hooks, allowing the same things as `useState` does, but using a slightly different syntax and behavior. With `providers`, you won't have to pass your hooks through `Props`, and using the following syntax will allow you to use your hooks everywhere you need it!
+
+```tsx
+function Component(): JSX.Element {
+	const [variable, setter] = useState<any>());
+
+	return (
+		<TaskContext.Provider value={{ variable, setter }}>
+			...
+		</TaskContext.Provider>
+	);
+}
+```
+<br/><br/>
+## Bonus
+
+Congratulations, you now have a functionnal Kanban style app to keep you organized through all your futur projects!
+
+You can still enhance it's behaviour, here are some examples:
+
+- You can add a background to your application
+- You can add a `Delete` button on each task to delete it
+- You can add a Due time using Calendars
+- You can link your application to a `backend` and a `database` to properly store your tasks (EPyTodo ?)
+
+<br/><br/>
 ## Authors
 
 | [<img src="https://github.com/RezaRahemtola.png?size=85" width=85><br><sub>Reza Rahemtola</sub>](https://github.com/RezaRahemtola) | [<img src="https://github.com/EdenComp.png?size=85" width=85><br><sub>Florian Lauch</sub>](https://github.com/EdenComp) | [<img src="https://github.com/Samoten777.png?size=85" width=85><br><sub>Laure Gagner</sub>](https://github.com/Samoten777) | [<img src="https://github.com/nicolasheude.png?size=85" width=85><br><sub>Nicolas Heude</sub>](https://github.com/nicolasheude) 
