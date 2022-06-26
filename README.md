@@ -101,7 +101,7 @@ function Component(): JSX.Element {
 <br/><br/>
 ## Bonus
 
-Congratulations, you now have a functionnal Kanban style app to keep you organized through all your futur projects!
+Congratulations, you now have a functionnal Kanban style app to keep yourself organized in all your future projects!
 
 You can still enhance it's behaviour, here are some examples:
 
