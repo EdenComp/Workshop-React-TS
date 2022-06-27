@@ -110,6 +110,8 @@ You can still enhance it's behaviour, here are some examples:
 - You can add a Due time using [Calendars](https://mui.com/x/react-date-pickers/getting-started/)
 - You can link your application to a `backend` and a `database` to properly store your tasks (EPyTodo ?)
 
+:bulb: We suggest you to take a look at [NextJS](https://nextjs.org) or [Remix](https://remix.run)!
+
 <br/><br/>
 ## Authors
 
